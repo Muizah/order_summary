@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-image: url(images/pattern-background-desktop.svg);
+  background-color: var(--pale_blue);
+  font-family: "Red Hat Display", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;
+  align-items: center; */
+  width: 30%;
+  /* height: 100%; */
+  background-color: white;
+  margin: auto;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  gap: 1rem;
+}
+.container .imagesection img {
+  width: 100%;
+  /* height: ; */
+  border-radius: 20px 20px 0 0;
+}
+html {
+  --dark_blue: hsl(223, 47%, 23%);
+  --pale_blue: hsl(225, 100%, 94%);
+  --bright_blue: hsl(245, 75%, 52%);
+  --very_pale_blue: hsl(225, 100%, 98%);
+  --desaturated_blue: hsl(224, 23%, 55%);
+}
+
+.container .textsection {
+  /* padding: 10px 20px 10px 20px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+h1 {
+  font-weight: 900;
+}
+.container .textsection p {
+  width: 80%;
+  text-align: center;
+  line-height: 1.5;
+  color: var(--desaturated_blue);
+}
+.container .iconsection {
+  background-color: var(--very_pale_blue);
+  display: flex;
+  padding: 10px 20px;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container .row {
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.container .iconsection .merge {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.container .iconsection p:first-of-type {
+  font-weight: 900;
+}
+
+.container .iconsection a {
+  color: var(--desaturated_blue);
+  font-weight: 700;
+}
+
+.container .buttonsection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.container .buttonsection button {
+  width: fit-content;
+  padding: 10px 30px;
+  border-radius: 10px;
+  background-color: var(--bright_blue);
+  border: 0;
+  color: white;
+}
+
+.container .buttonsection button:last-of-type {
+  color: var(--desaturated_blue);
+  background-color: transparent;
+  font-weight: 700;
+}
+
+.container .buttonsection button:first-of-type {
+  box-shadow: 1px 1px var(--bright_blue);
+}
+
+@media (min-width: 375px) and (max-width: 800px) {
+  .row {
+    padding: 5px 10px !important;
+  }
+  .container {
+    width: 50%;
+  }
+}
+
+@media (max-width: 375px) {
+  .container {
+    width: 90%;
+  }
+  .container .textsection p {
+    width: 90%;
+  }
+}
